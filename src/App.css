@@ -29,7 +29,6 @@ header {
 }
 
 .container {
-    background-color: #eeeeee;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,4 +70,28 @@ header {
 
 .country-flag {
     height: 30px;
+}
+
+.africa {
+    color: cornflowerblue;
+}
+
+.america {
+    color: seagreen;
+}
+
+.asia {
+    color: darkred;
+}
+
+.europe {
+    color: #ffc400;
+}
+
+.oceania {
+    color: rebeccapurple;
+}
+
+.other {
+    color: #868686;
 }

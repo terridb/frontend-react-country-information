@@ -2,6 +2,7 @@ import './App.css';
 import axios from 'axios';
 import worldMap from './assets/world_map.png'
 import {useState} from "react";
+import {decideColor} from "./helpers/decideColor.js";
 
 function App() {
     const [country, setCountry] = useState([]);
@@ -47,7 +48,9 @@ function App() {
                                         <div className="card-title-flag">
                                             <img className="country-flag" src={country.flags.png}
                                                  alt={`Flag of ${country.name.common}`}/>
-                                            <h4>{country.name.common}</h4>
+                                            <h4 className={decideColor(country)}>
+                                                {country.name.common}
+                                            </h4>
                                         </div>
                                         <p>Has a population of {country.population} people</p>
                                     </div>
