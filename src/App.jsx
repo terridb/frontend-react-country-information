@@ -27,7 +27,7 @@ function App() {
     return (
         <>
             <header>
-                <img src={worldMap} alt="World Map"/>
+                <img className="header-image" src={worldMap} alt="World Map"/>
                 <h1>World regions</h1>
             </header>
             <main>
@@ -39,24 +39,24 @@ function App() {
                     }
                     {loading && <span className="loader"></span>}
                     {error && <div className="error-message">Error: {error}</div>}
-                    <div className="countries-grid">
-                        {
-                            country
-                                .sort((a, b) => a.population - b.population)
-                                .map((country) => (
-                                    <div key={country.cca3} className="country-card">
-                                        <div className="card-title-flag">
-                                            <img className="country-flag" src={country.flags.png}
-                                                 alt={`Flag of ${country.name.common}`}/>
-                                            <h4 className={decideColor(country)}>
-                                                {country.name.common}
-                                            </h4>
-                                        </div>
-                                        <p>Has a population of {country.population} people</p>
-                                    </div>
-                                ))
-                        }
-                    </div>
+                    <ul className="countries-grid">
+                            {
+                                country
+                                    .sort((a, b) => a.population - b.population)
+                                    .map((country) => (
+                                        <li key={country.cca3} className="country-card">
+                                            <div className="card-title-flag">
+                                                <img className="country-flag" src={country.flags.png}
+                                                     alt={`Flag of ${country.name.common}`}/>
+                                                <h4 className={decideColor(country)}>
+                                                    {country.name.common}
+                                                </h4>
+                                            </div>
+                                            <p>Has a population of {country.population} people</p>
+                                        </li>
+                                    ))
+                            }
+                    </ul>
                 </section>
             </main>
         </>
