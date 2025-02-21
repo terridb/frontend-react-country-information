@@ -88,12 +88,18 @@ function App() {
             const filteredCountries = response.data.filter(country =>
                 country.name.common.toLowerCase().includes(searchValue.toLowerCase())
             );
-            setCountry(filteredCountries);
+            if (filteredCountries.length === 0) {
+                setError(`${searchValue} bestaat niet. Probeer het opnieuw.`);
+            } else {
+                setError(null);
+                setCountry(filteredCountries);
+            }
         } catch (err) {
             setError(err);
             console.error(err);
         } finally {
             setLoading(false);
+            setSearchValue('');
         }
     }
 
