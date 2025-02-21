@@ -1,0 +1,177 @@
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #adadad;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.search-bar {
+    margin: 50px 0;
+}
+
+.search-bar input {
+    border: solid 2px lightblue;
+    border-radius: 10px 0 0 10px;
+    height: 40px;
+    outline: none;
+    padding: 0 10px;
+    width: 300px;
+}
+
+.search-bar button {
+    height: 40px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: lightblue;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.country-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.country-card {
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.card-title-flag {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin: 0 0 20px 0;
+}
+
+.country-flag {
+    height: 40px;
+}
+
+.country-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/*Opdracht 1:*/
+/*.header-image {*/
+/*    max-width: 80%;*/
+/*}*/
+
+/*header {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.loader {*/
+/*    width: 48px;*/
+/*    height: 48px;*/
+/*    border: 5px solid #adadad;*/
+/*    border-bottom-color: transparent;*/
+/*    border-radius: 50%;*/
+/*    display: inline-block;*/
+/*    box-sizing: border-box;*/
+/*    animation: rotation 1s linear infinite;*/
+/*}*/
+
+/*@keyframes rotation {*/
+/*    0% {*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*    100% {*/
+/*        transform: rotate(360deg);*/
+/*    }*/
+/*}*/
+
+/*.container {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.data-button {*/
+/*    align-self: center;*/
+/*    padding: 10px 15px;*/
+/*    margin: 20px 0;*/
+/*    border: none;*/
+/*    border-radius: 30px;*/
+/*    background-color: #adadad;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.countries-grid {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    padding: 0 50px;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+/*.country-card {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: flex-start;*/
+/*    flex-basis: calc(33.33% - 30px);*/
+/*    padding: 5px;*/
+/*    margin: 10px 0;*/
+/*}*/
+
+/*.card-title-flag {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    align-items: center;*/
+/*    gap: 10px;*/
+/*    height: 40px;*/
+/*}*/
+
+/*.country-flag {*/
+/*    height: 30px;*/
+/*}*/
+
+/*.africa {*/
+/*    color: cornflowerblue;*/
+/*}*/
+
+/*.america {*/
+/*    color: seagreen;*/
+/*}*/
+
+/*.asia {*/
+/*    color: darkred;*/
+/*}*/
+
+/*.europe {*/
+/*    color: #ffc400;*/
+/*}*/
+
+/*.oceania {*/
+/*    color: rebeccapurple;*/
+/*}*/
+
+/*.other {*/
+/*    color: #868686;*/
+/*}*/
